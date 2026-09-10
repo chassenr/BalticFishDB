@@ -1,0 +1,12 @@
+name: align-env
+channels:
+  - bioconda
+dependencies:
+  - clustalo
+  - clustalw
+  - mafft
+  - muscle
+  - sina
+  - prank
+  - clipkit
+  - cialign

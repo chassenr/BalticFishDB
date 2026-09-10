@@ -1,0 +1,16 @@
+name: paprica-env
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - pandas
+  - joblib
+  - Biopython
+  - numpy
+  - termcolor
+  - infernal
+  - gappa
+  - seqmagick
+  - epa-ng
+  - hmmer
+

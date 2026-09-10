@@ -1,0 +1,12 @@
+name: meme-5.5.9
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - meme
+  - pyqt
+  - ete3
+  - biopython
+  - legacy-cgi
+

@@ -1,0 +1,6 @@
+name: taxonkit-0.20.0
+channels:
+  - bioconda
+dependencies:
+  - taxonkit
+  - csvtk

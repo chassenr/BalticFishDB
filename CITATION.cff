@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this workflow, please cite it as below."
+authors:
+- family-names: "Hassenrueck"
+  given-names: "Christiane"
+  orcid: "https://orcid.org/0000-0003-1909-1726"
+- family-names: "Piontek"
+  given-names: "Judith"
+  orcid: "https://orcid.org/0000-0003-3857-8206"
+title: "BalticFishDB: A curated 12S reference sequence database for Baltic Sea fish species"
+doi: pending
+date-released: 2026-09-10
+url: "https://github.com/chassenr/BalticFishDB"
