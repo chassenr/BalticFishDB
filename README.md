@@ -22,8 +22,7 @@ BalticFishDB is designed for the taxonomic classification of mitochondrial 12S r
 
 Each step is extensively commented in [sequence_selection.sh](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/scripts/sequence_selection.sh). Here, we summarized the main analysis steps to guide users through the pipeline.
 
-<img src="https://git.iow.de/bio_inf/BalticFishDB/raw/branch/main/images/sequence_selection_overview.png" width="100%" height="100%">
-
+<img src="https://github.com/chassenr/BalticFishDB/blob/main/images/sequence_selection_overview.png" width="100%" height="100%">
 
 ### Preparation of working environment
 
