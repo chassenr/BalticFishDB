@@ -8,19 +8,19 @@ BalticFishDB is designed for the taxonomic classification of mitochondrial 12S r
 ## Contents of the repository
 
 **assets** 
-* [balticfishdb_species_list.tsv](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/assets/balticfishdb_species_list.tsv): List of known Baltic Sea species (status: 2025-05-20). This list was compiled from [FishBase](https://www.fishbase.se/identification/RegionSpeciesList.php?e_code=104) and the [HELCOM Checklist 2.0 of Baltic Sea Macrospecies](https://helcom.fi/publications/helcom-checklist-2-0-of-baltic-sea-macrospecies/).
-* Sequence accession blacklists: During the compilation of the database three manually curated blacklists were used: [exclusions.accnos](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/assets/exclusions.accnos) is based on the list of accessions with presumably erroneous species assignments in [Meta-Fish-Lib](https://onlinelibrary.wiley.com/doi/10.1111/jfb.14852), [anomalies.accnos](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/assets/anomalies.accnos) was curated during this workflow based on the output of the [PhyloRef anomaly detection module](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.73159) that inspects taxonomic consistency based on tree topology, [placement.accnos](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/assets/placement.accnos) contains accessions of sequences shorter than 600bp that were discarded based on an anomalous phylogenetic placement in the tree of full-length 12S sequences due to insufficient region coverage or presumably erroneous species assignments.
+* [balticfishdb_species_list.tsv](https://github.com/chassenr/BalticFishDB/blob/main/assets/balticfishdb_species_list.tsv): List of known Baltic Sea species (status: 2025-05-20). This list was compiled from [FishBase](https://www.fishbase.se/identification/RegionSpeciesList.php?e_code=104) and the [HELCOM Checklist 2.0 of Baltic Sea Macrospecies](https://helcom.fi/publications/helcom-checklist-2-0-of-baltic-sea-macrospecies/).
+* Sequence accession blacklists: During the compilation of the database three manually curated blacklists were used: [exclusions.accnos](https://github.com/chassenr/BalticFishDB/blob/main/assets/exclusions.accnos) is based on the list of accessions with presumably erroneous species assignments in [Meta-Fish-Lib](https://onlinelibrary.wiley.com/doi/10.1111/jfb.14852), [anomalies.accnos](https://github.com/chassenr/BalticFishDB/blob/main/assets/anomalies.accnos) was curated during this workflow based on the output of the [PhyloRef anomaly detection module](https://onlinelibrary.wiley.com/doi/full/10.1002/ece3.73159) that inspects taxonomic consistency based on tree topology, [placement.accnos](https://github.com/chassenr/BalticFishDB/blob/main/assets/placement.accnos) contains accessions of sequences shorter than 600bp that were discarded based on an anomalous phylogenetic placement in the tree of full-length 12S sequences due to insufficient region coverage or presumably erroneous species assignments.
 
 **scripts**
-* [sequence_selection.sh](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/scripts/sequence_selection.sh): Interactive bash script for the main workflow, detailing sequence retrieval, customization of sequence selection for the Baltic Sea, curation based on alignment and phylogeny, placement of short sequences to increase species coverage, formatting of final sequence selection for use as reference database with blast and dada2.
-* [filter_alignment_sequence_similarity.R](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/scripts/filter_alignment_sequence_similarity.R): Helper script to calculate sequence similarity based on multiple sequence alignments and to filter sequences based on alignment similarity.
-* [reference_db_insilico_pcr.sh](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/scripts/reference_db_insilico_pcr.sh): Interactive bash script to run in-silico PCR on the reference sequence database and assess species coverage for popular 12S primer pairs.
-* [validate_species_gap.R](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/scripts/validate_species_gap.R): Helper script to calculate sequence similarity based on multiple sequence alignments in order to visualize and quantify the barcode gap per species for popular 12S primer pairs.
+* [sequence_selection.sh](https://github.com/chassenr/BalticFishDB/blob/main/scripts/sequence_selection.sh): Interactive bash script for the main workflow, detailing sequence retrieval, customization of sequence selection for the Baltic Sea, curation based on alignment and phylogeny, placement of short sequences to increase species coverage, formatting of final sequence selection for use as reference database with blast and dada2.
+* [filter_alignment_sequence_similarity.R](https://github.com/chassenr/BalticFishDB/blob/main/scripts/filter_alignment_sequence_similarity.R): Helper script to calculate sequence similarity based on multiple sequence alignments and to filter sequences based on alignment similarity.
+* [reference_db_insilico_pcr.sh](https://github.com/chassenr/BalticFishDB/blob/main/scripts/reference_db_insilico_pcr.sh): Interactive bash script to run in-silico PCR on the reference sequence database and assess species coverage for popular 12S primer pairs.
+* [validate_species_gap.R](https://github.com/chassenr/BalticFishDB/blob/main/scripts/validate_species_gap.R): Helper script to calculate sequence similarity based on multiple sequence alignments in order to visualize and quantify the barcode gap per species for popular 12S primer pairs.
 
 
 ## Workflow description
 
-Each step is extensively commented in [sequence_selection.sh](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/scripts/sequence_selection.sh). Here, we summarized the main analysis steps to guide users through the pipeline.
+Each step is extensively commented in [sequence_selection.sh](https://github.com/chassenr/BalticFishDB/blob/main/scripts/sequence_selection.sh). Here, we summarized the main analysis steps to guide users through the pipeline.
 
 <img src="https://github.com/chassenr/BalticFishDB/blob/main/images/sequence_selection_overview.png" width="100%" height="100%">
 
@@ -28,7 +28,7 @@ Each step is extensively commented in [sequence_selection.sh](https://git.iow.de
 
 The workflow was developed and run on Ubuntu 22.04.5 LTS.
 
-The following dependencies are needed to run the workflow. The conda evironments, in which these dependecies are available on the system the workflow was developed on, are indicated in parentheses. Install instructions for these environments can be found [here](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/envs/install_instructions.sh).
+The following dependencies are needed to run the workflow. The conda evironments, in which these dependecies are available on the system the workflow was developed on, are indicated in parentheses. Install instructions for these environments can be found [here](https://github.com/chassenr/BalticFishDB/blob/main/envs/install_instructions.sh).
 
 * mafft=7.525 (align-env)
 * entrez-direct=24.0 (antismash-8.0.4)
@@ -44,7 +44,7 @@ For manual curation, the following programs were used:
 * JalView 2.11.5.2
 * RStudio 2026.05.0 with R 4.6.0 and the packages: seqinr 4.2.44, stringr 1.6.0, reshape 0.8.10, tidyverse 2.2.0, scales 1.4.0 
 
-The [script for sequence selection and curation](https://git.iow.de/bio_inf/BalticFishDB/src/branch/main/scripts/sequence_selection.sh) is using environment variables for the location of the main working directors and the location of the repository. Change those to adapt them to your system.
+The [script for sequence selection and curation](https://github.com/chassenr/BalticFishDB/blob/main/scripts/sequence_selection.sh) is using environment variables for the location of the main working directors and the location of the repository. Change those to adapt them to your system.
 
 
 ### Retrieve available sequence from NCBI, MIDORI2, PhyloRef
